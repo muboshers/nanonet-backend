@@ -1,22 +1,21 @@
 import { Router } from "express";
 import {
-  enaboutCreateController,
-  enaboutDeleteController,
-  enaboutGetAllController,
-  enaboutGetByIdController,
-  enaboutUpdateController,
+  aboutCreateController,
+  aboutUpdateController,
+  aboutDeleteController,
+  getAllAboutController,
+  getByIdAboutController,
 } from "../../controller/en/about.controller.js";
-
 const router = Router();
 // create about
-router.post("/", enaboutCreateController);
+router.post("/", aboutCreateController);
 // update about
-router.patch("/:id", enaboutUpdateController);
+router.patch("/:id", aboutUpdateController);
 // delete about
-router.delete("/:id", enaboutDeleteController);
+router.delete("/:id", aboutDeleteController);
 // get all about
-router.get("/", enaboutGetAllController);
+router.get("/", getAllAboutController);
 // get by id
-router.get("/", enaboutGetByIdController);
+router.get("/:id", getByIdAboutController);
 
 export default router;

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const aboutSchema = mongoose.Schema({
   title: String,
   description: String,
+  author: String,
 });
 
-export const engAboutModel = new mongoose.model("enabout", aboutSchema);
-
+export const engAboutModel = mongoose.model("enabout", aboutSchema);
