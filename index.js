@@ -3,15 +3,14 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
-
 // import routes
 import AdminRoute from "./routes/admin.routes.js";
 import AuthRoute from "./routes/auth.routes.js";
 import AboutRoute from "./routes/languages/about.routes.js";
+import BlogRoute from "./routes/languages/blog.routes.js";
 // config dotenv
 dotenv.config();
 const app = express();
-
 app.use(
   cors({
     origin: "*",
@@ -19,11 +18,11 @@ app.use(
   })
 );
 app.use(express.json());
-
 // use routes in here
 app.use("/api/admin", AdminRoute);
 app.use("/api/auth", AuthRoute);
 app.use("/api/about", AboutRoute);
+app.use("/api/blog", BlogRoute);
 // PORT
 const PORT = process.env.PORT || 4000;
 mongoose
