@@ -9,10 +9,6 @@ const BlogSchema = mongoose.Schema(
       type: Array,
       default: [],
     },
-    blogCaption: {
-      type: Array,
-      default: [],
-    },
   },
   { timestamps: true }
 );

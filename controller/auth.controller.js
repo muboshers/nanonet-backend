@@ -1,10 +1,8 @@
 import { adminModel } from "../models/admin/admin.model.js";
 import jwt from "jsonwebtoken";
 import bcryptjs from "bcryptjs";
-
 export const authController = async (req, res) => {
   const admin = await adminModel.findOne({ email: req.body.email });
-
   // check admin if admin not found then return 404 response
   if (!admin) return res.status(404).json({ message: "Admin Not Found" });
   //   check password

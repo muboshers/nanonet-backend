@@ -8,7 +8,7 @@ import AdminRoute from "./routes/admin.routes.js";
 import AuthRoute from "./routes/auth.routes.js";
 import AboutRoute from "./routes/languages/about.routes.js";
 import BlogRoute from "./routes/languages/blog.routes.js";
-// config dotenv
+// config dotenv securety
 dotenv.config();
 const app = express();
 app.use(
@@ -26,7 +26,7 @@ app.use("/api/blog", BlogRoute);
 // PORT
 const PORT = process.env.PORT || 4000;
 mongoose
-  .connect("mongodb://localhost:27017")
+  .connect(process.env.SERVER_URL)
   .then(() => console.log("Mongo db succesfully connected"))
   .catch((err) => console.log(`Something wrong ${err.message}`));
 
