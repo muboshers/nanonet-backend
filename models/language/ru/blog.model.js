@@ -5,10 +5,7 @@ const BlogSchema = mongoose.Schema(
     creator: String,
     title: String,
     blogImage: String,
-    description: {
-      type: Array,
-      default: [],
-    },
+    description: String,
   },
   { timestamps: true }
 );

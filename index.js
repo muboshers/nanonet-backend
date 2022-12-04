@@ -30,4 +30,7 @@ mongoose
   .then(() => console.log("Mongo db succesfully connected"))
   .catch((err) => console.log(`Something wrong ${err.message}`));
 
+// app use static folder in images
+app.use(express.static("./images"));
+
 app.listen(PORT, () => console.log(`Server is running: ${PORT}`));

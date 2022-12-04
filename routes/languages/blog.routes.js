@@ -2,11 +2,10 @@ import { Router } from "express";
 import multer from "multer";
 import {
   createBlogController,
+  deleteBlogController,
+  getAllBlogController,
   updateBlogController,
 } from "../../controller/en/blog.controller.js";
-import { uploadMidlleware } from "../../middleware/upload.js";
-// image upload middleware
-// image upload middleware
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "images");
@@ -20,11 +19,15 @@ const storage = multer.diskStorage({
     );
   },
 });
-
 const upload = multer({ storage }).single("blogImage");
 const router = Router();
 // create blog
 router.post("/", upload, createBlogController);
 // update blog
 router.patch("/:id", upload, updateBlogController);
+// delete blog controller
+router.delete("/:id", deleteBlogController);
+// get all blog controller
+router.get("/", getAllBlogController);
+
 export default router;
