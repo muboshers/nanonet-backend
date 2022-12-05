@@ -5,7 +5,7 @@ import {
   aboutDeleteController,
   getAllAboutController,
   getByIdAboutController,
-} from "../../controller/en/about.controller.js";
+} from "../../controller/languages/about.controller.js";
 const router = Router();
 // create about
 router.post("/", aboutCreateController);

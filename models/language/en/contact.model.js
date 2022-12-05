@@ -9,7 +9,7 @@ const contactSchema = mongoose.Schema(
     isCheck: {
       type: Boolean,
       default: false,
-    },
+    },  
   },
   { timestamps: true }
 );

@@ -103,7 +103,6 @@ export const updateToReadContactController = async (req, res) => {
     }
   }
 };
-
 // get all contact message
 export const getAllContactMessageController = async (req, res) => {
   const { lang = "en" } = req.query;

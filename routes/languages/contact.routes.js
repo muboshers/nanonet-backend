@@ -4,7 +4,7 @@ import {
   deleteContactController,
   getAllContactMessageController,
   updateToReadContactController,
-} from "../../controller/en/contact.controller.js";
+} from "../../controller/languages/contact.controller.js";
 
 const router = Router();
 

@@ -6,7 +6,7 @@ import {
   getAllBlogController,
   getByIdBlogController,
   updateBlogController,
-} from "../../controller/en/blog.controller.js";
+} from "../../controller/languages/blog.controller.js";
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "images");
