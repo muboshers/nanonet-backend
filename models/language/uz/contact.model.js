@@ -5,6 +5,10 @@ const contactSchema = mongoose.Schema(
     email: String,
     phoneNumber: String,
     contactMessage: String,
+    isCheck: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

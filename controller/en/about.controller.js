@@ -13,7 +13,6 @@ export const aboutCreateController = async (req, res) => {
       await engAboutModel.create({
         title: req.body.title,
         description: req.body.description,
-        author: req.body.author,
       });
 
       res
@@ -29,7 +28,6 @@ export const aboutCreateController = async (req, res) => {
       await ruAboutModel.create({
         title: req.body.title,
         description: req.body.description,
-        author: req.body.author,
       });
 
       res
@@ -45,7 +43,6 @@ export const aboutCreateController = async (req, res) => {
       await uzAboutModel.create({
         title: req.body.title,
         description: req.body.description,
-        author: req.body.author,
       });
 
       res.status(200).json({ message: "Ma'lumot muvaqqiyatli yaratildi " });

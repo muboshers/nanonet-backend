@@ -8,6 +8,8 @@ import AdminRoute from "./routes/admin.routes.js";
 import AuthRoute from "./routes/auth.routes.js";
 import AboutRoute from "./routes/languages/about.routes.js";
 import BlogRoute from "./routes/languages/blog.routes.js";
+import ContactRoute from "./routes/languages/contact.routes.js";
+
 // config dotenv securety
 dotenv.config();
 const app = express();
@@ -23,7 +25,9 @@ app.use("/api/admin", AdminRoute);
 app.use("/api/auth", AuthRoute);
 app.use("/api/about", AboutRoute);
 app.use("/api/blog", BlogRoute);
-// PORT
+app.use("/api/contact/", ContactRoute);
+
+// // PORT
 const PORT = process.env.PORT || 4000;
 mongoose
   .connect(process.env.SERVER_URL)

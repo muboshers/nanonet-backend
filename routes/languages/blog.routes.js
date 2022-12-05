@@ -4,6 +4,7 @@ import {
   createBlogController,
   deleteBlogController,
   getAllBlogController,
+  getByIdBlogController,
   updateBlogController,
 } from "../../controller/en/blog.controller.js";
 const storage = multer.diskStorage({
@@ -29,5 +30,7 @@ router.patch("/:id", upload, updateBlogController);
 router.delete("/:id", deleteBlogController);
 // get all blog controller
 router.get("/", getAllBlogController);
+// get by id blog controller
+router.get("/:id", getByIdBlogController);
 
 export default router;

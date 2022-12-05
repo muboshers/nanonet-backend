@@ -209,3 +209,35 @@ export const getAllBlogController = async (req, res) => {
     return res.status(500).json({ message: error.message });
   }
 };
+
+// get by id
+
+export const getByIdBlogController = async (req, res) => {
+  const { lang = "en" } = req.query;
+  const { id } = req.params;
+  if (lang === "en") {
+    const enBlog = await enBlogModel.findById(id);
+    if (!enBlog) return res.status(404).json({ message: "Not found" });
+    try {
+      return res.status(200).json(enBlog);
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  } else if (lang === "ru") {
+    const ruBlog = await ruBlogModel.findById(id);
+    if (!ruBlog) return res.status(404).json({ message: "Not found" });
+    try {
+      return res.status(200).json(ruBlog);
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  } else {
+    const uzBlog = await uzBlogModel.findById(id);
+    if (!uzBlog) return res.status(404).json({ message: "Not found" });
+    try {
+      return res.status(200).json(uzBlog);
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  }
+};
