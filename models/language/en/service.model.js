@@ -4,7 +4,7 @@ const serviceSchema = mongoose.Schema(
   {
     title: String,
     description: String,
-    cetagory: string,
+    cetagory: String,
   },
   {
     timestamps: true,

@@ -10,6 +10,7 @@ import AboutRoute from "./routes/languages/about.routes.js";
 import BlogRoute from "./routes/languages/blog.routes.js";
 import ContactRoute from "./routes/languages/contact.routes.js";
 import ServiceRoute from "./routes/languages/service.routes.js";
+import CardRoute from "./routes/languages/card.routes.js";
 // config dotenv securety
 dotenv.config();
 const app = express();
@@ -27,6 +28,7 @@ app.use("/api/about", AboutRoute);
 app.use("/api/blog", BlogRoute);
 app.use("/api/contact", ContactRoute);
 app.use("/api/service", ServiceRoute);
+app.use("/api/card", CardRoute);
 
 // // PORT
 const PORT = process.env.PORT || 4000;

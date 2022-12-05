@@ -6,7 +6,7 @@ export const cardSchema = mongoose.Schema({
   category: String,
   isOnline: {
     type: Boolean,
-    default: true,
+    default: false,
   },
 });
 
