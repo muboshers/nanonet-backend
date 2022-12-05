@@ -1,6 +1,6 @@
-import { enCardModel } from "../../models/language/en/card.model";
-import { ruCardModel } from "../../models/language/ru/card.model";
-import { uzCardModel } from "../../models/language/uz/card.model";
+import { enCardModel } from "../../models/language/en/card.model.js";
+import { ruCardModel } from "../../models/language/ru/card.model.js";
+import { uzCardModel } from "../../models/language/uz/card.model.js";
 // create service
 export const createCardController = async (req, res) => {
   const { lang = "en" } = req.query;
